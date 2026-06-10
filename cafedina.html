@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Dina Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+    body{
+        margin:0;
+        font-family:'Vazirmatn', sans-serif;
+        background: linear-gradient(-45deg,#ffd1dc,#cfe8ff,#ffe6f2,#d6f3ff);
+        background-size: 400% 400%;
+        animation: bgMove 10s ease infinite;
+        color:#333;
+    }
+
+    @keyframes bgMove{
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+
+    header{
+        text-align:center;
+        padding:40px 20px;
+        font-size:42px;
+        font-weight:700;
+        color:#ff3f88;
+        text-shadow:0 5px 15px rgba(0,0,0,0.1);
+        animation: fadeDown 1s ease;
+    }
+
+    .sub{
+        text-align:center;
+        margin-top:-10px;
+        font-size:18px;
+        color:#444;
+        animation: fadeDown 1.5s ease;
+    }
+
+    @keyframes fadeDown{
+        from{opacity:0; transform:translateY(-20px)}
+        to{opacity:1; transform:translateY(0)}
+    }
+
+    .container{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding:30px;
+        gap:20px;
+    }
+
+    .card{
+        background: rgba(255,255,255,0.85);
+        width:300px;
+        padding:20px;
+        border-radius:20px;
+        box-shadow:0 15px 35px rgba(0,0,0,0.15);
+        border:1px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(10px);
+        transform: translateY(30px);
+        opacity:0;
+        animation: cardIn 0.8s ease forwards;
+    }
+
+    .card:nth-child(1){animation-delay:0.2s}
+    .card:nth-child(2){animation-delay:0.4s}
+    .card:nth-child(3){animation-delay:0.6s}
+    .card:nth-child(4){animation-delay:0.8s}
+
+    @keyframes cardIn{
+        to{
+            opacity:1;
+            transform: translateY(0);
+        }
+    }
+
+    .card:hover{
+        transform: translateY(-8px) scale(1.02);
+        transition:0.4s;
+        box-shadow:0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .title{
+        font-size:22px;
+        color:#ff3f88;
+        margin-bottom:10px;
+        font-weight:700;
+    }
+
+    .item{
+        display:flex;
+        justify-content:space-between;
+        padding:8px 0;
+        border-bottom:1px dashed #ddd;
+        font-size:15px;
+        transition:0.3s;
+    }
+
+    .item:hover{
+        background:#fff0f6;
+        padding-right:10px;
+        border-radius:10px;
+    }
+
+    .popular{
+        color:#ff3f88;
+        font-weight:700;
+    }
+
+    footer{
+        text-align:center;
+        padding:40px 20px;
+        background: rgba(255,255,255,0.8);
+        margin-top:40px;
+        font-size:16px;
+        color:#444;
+        animation: fadeUp 2s ease;
+    }
+
+    @keyframes fadeUp{
+        from{opacity:0; transform:translateY(20px)}
+        to{opacity:1; transform:translateY(0)}
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>☕ Cafe Dina 🌸</header>
+<div class="sub">جایی برای آرامش، طعم و لحظه‌های خاص ✨</div>
+
+<div class="container">
+
+    <div class="card">
+        <div class="title">🥤 نوشیدنی‌های سرد</div>
+        <div class="item popular">آیس لاته ☕️❄️ <span>85,000</span></div>
+        <div class="item">آیس آمریکانو 🧊☕️ <span>70,000</span></div>
+        <div class="item">موهیتو 🍋🌿 <span>90,000</span></div>
+        <div class="item">شیک شکلات 🍫🥤 <span>110,000</span></div>
+        <div class="item">اسموتی توت‌فرنگی 🍓 <span>120,000</span></div>
+    </div>
+
+    <div class="card">
+        <div class="title">☕ نوشیدنی‌های گرم</div>
+        <div class="item popular">اسپرسو ☕️ <span>60,000</span></div>
+        <div class="item">لاته ☕️🥛 <span>80,000</span></div>
+        <div class="item">کاپوچینو ☕️🌿 <span>85,000</span></div>
+        <div class="item">هات چاکلت 🍫🔥 <span>95,000</span></div>
+        <div class="item">چای ماسالا 🍵✨ <span>75,000</span></div>
+    </div><div class="card">
+        <div class="title">🍰 کیک و دسر</div>
+        <div class="item popular">چیزکیک 🍰✨ <span>130,000</span></div>
+        <div class="item">کروسان 🥐 <span>70,000</span></div>
+        <div class="item">براونی 🍫 <span>110,000</span></div>
+        <div class="item">تیرامیسو ☕️🍮 <span>140,000</span></div>
+        <div class="item">کیک شکلاتی 🎂 <span>120,000</span></div>
+    </div>
+
+    <div class="card">
+        <div class="title">🍔 غذاها</div>
+        <div class="item popular">برگر مخصوص 🍔🔥 <span>180,000</span></div>
+        <div class="item">پاستا آلفردو 🍝 <span>200,000</span></div>
+        <div class="item">سالاد سزار 🥗 <span>160,000</span></div>
+        <div class="item">ساندویچ مرغ 🥪 <span>150,000</span></div>
+        <div class="item">سیب‌زمینی ویژه 🍟 <span>90,000</span></div>
+    </div>
+
+</div>
+
+<footer>
+💗 Cafe Dina فقط یک کافه نیست… یک حسه 💗<br>
+هر جرعه، یک لحظه آرامش ✨<br>
+خوشحال می‌شیم دوباره ببینیمت 🌸
+</footer>
+
+</body>
+</html>
